@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualization Case Analysis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 20px;
+    }
+    .case-container {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      width: 100%;
+    }
+    .left-panel, .right-panel {
+      flex: 1;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .case-title {
+      font-size: 1.3em;
+      color: #333;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+      background-color: #ffffff; /* White background to match the image */
+      border-radius: 5px;
+    }
+    .main-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .zoom-detail {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 150px;
+      height: 150px;
+      border: 2px solid #333;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      background-repeat: no-repeat;
+      background-size: 500%;
+      border-radius: 50%;
+      background-position: center;
+      pointer-events: none;
+    }
+    .image-container:hover .zoom-detail {
+      display: block;
+    }
+    .subtitle {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #333;
+    }
+    .analysis {
+      margin-bottom: 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .header h1 {
+      font-size: 2.5em;
+      color: #333;
+    }
+    .header h2 {
+      font-size: 1.5em;
+      color: #666;
+      font-weight: normal;
+    }
+    .left-panel, .right-panel {
+      max-width: 48%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Header Section -->
+  <div class="header">
+    <h1>Visual Problem Analysis of Charts——How to balance art and function
+    </h1>
+    <h2>Assignment2 1009613 LIU JUNCHEN</h2>
+  </div>
+
+  <div class="container">
+    <div class="case-container">
+      <!-- Left panel for image display -->
+      <div class="left-panel">
+        <h1>Case Display</h1>
+        <div class="image-container" id="image-container-1">
+          <img src="https://cdn.prod.website-files.com/5f3cdd52b6334d85470f0daf/5f491a9bda68ec0584b3a121_star_wars_kirell_benzi.jpg" alt="Star Wars Map" class="main-image">
+          <div class="zoom-detail" id="zoom-detail-1" style="background-image: url('https://cdn.prod.website-files.com/5f3cdd52b6334d85470f0daf/5f491a9bda68ec0584b3a121_star_wars_kirell_benzi.jpg');"></div>
+        </div>
+      </div>
+
+      <!-- Right panel for case analysis and suggestions -->
+      <div class="right-panel">
+        <h1>Problem Analysis and Suggestions</h1>
+        <h2 class="case-title">Case 1: Star Wars Extended Universe Relationship Map</h2>
+        <p class="subtitle">Problem Analysis:</p>
+        <ul>
+          <li>Reduce the number of lines and colors to avoid visual overload. Use a clearer design that emphasizes key data points and relationships. Consider breaking the data into smaller sections or visualizations to make it easier to digest.</li>
+          <li>Introduce a more structured layout, where the flow of information is clearer. For example, use grid systems or network-like designs that show clear connections between data points. Grouping related data points together would help viewers understand patterns more easily.</li>
+          <li>imit the number of colors used and assign specific meanings to different colors, ensuring that the color scheme enhances the clarity of the data. For example, use different colors to represent different categories or types of data, and ensure that the meaning of each color is explained.</li>
+          <li>Include a legend to explain what the colors and lines represent, helping the viewer understand the data. Labels on key points or axes can also guide the viewer’s interpretation and ensure the data is understood correctly.</li>
+          <li>Consider adding annotations or a brief description of the dataset and its significance. This will help viewers—particularly those unfamiliar with the topic—understand the context behind the data and how the visualization conveys that information.</li>
+        </ul>
+
+        <p class="subtitle">Suggestions:</p>
+        <ul>
+          <li>Limit the number of colors and choose significantly different colors to make it easier for users to distinguish different areas.</li>
+          <li>Use scientifically verified color schemes, such as those provided by ColorBrewer, to enhance readability.</li>
+          <li>Design a simpler and clearer legend to help users quickly understand the map information.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="case-container">
+      <!-- Left panel for image display -->
+      <div class="left-panel">
+        <h1>Case Display</h1>
+        <div class="image-container" id="image-container-2">
+          <img src="https://junkcharts.typepad.com/.a/6a00d8341e992c53ef02c8d39f02e1200b-pi" alt="Segmenting the Survey Results with a Stacked Bar Chart" class="main-image">
+          <div class="zoom-detail" id="zoom-detail-2" style="background-image: url('https://junkcharts.typepad.com/.a/6a00d8341e992c53ef02c8d39f02e1200b-pi');"></div>
+        </div>
+      </div>
+
+      <!-- Right panel for case analysis and suggestions -->
+      <div class="right-panel">
+        <h1>Problem Analysis and Suggestions</h1>
+        <h2 class="case-title">Case 2: Segmenting the Survey Results with a Stacked Bar Chart</h2>
+
+        <p class="subtitle">Problem Analysis:</p>
+        <ul>
+          <li>The chart uses complex visual elements (such as "oil barrel" shapes for each country), which add visual appeal but also create high data density. Many countries with smaller oil production may be hidden or hard to recognize, affecting the communication of information.</li>
+          <li>The detailed legend on the right side of the chart is not well integrated with the main visual information. Viewers must constantly refer to the legend to understand what each "oil barrel" represents, which adds to the difficulty of comprehension.</li>
+          <li>The use of "oil barrel" icons to represent each country's oil production wastes a lot of space. Especially in the peripheral areas of the chart, many barrel icons are not effectively using space, making the data presentation seem crowded and unclear.</li>
+        </ul>
+
+        <p class="subtitle">Suggestions:</p>
+        <ul>
+          <li>Consider using more intuitive chart types like bar charts, column charts, or maps. Convert the oil production of each country into comparable figures, simplifying visual elements for better readability and comparison.</li>
+          <li>Make the legend larger and more closely integrated with the data points in the chart. Avoid requiring viewers to frequently check the legend. You can also add numeric labels directly to the chart to clearly show each country's oil production.</li>
+          <li>If global oil production is the focus, consider splitting the data into multiple charts or regions (e.g., North America, Middle East) to avoid overloading a single chart with information. This would help viewers better digest and understand the data.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add mouse move event to adjust the zoom detail for the first image
+    document.getElementById("image-container-1").addEventListener("mousemove", function(e) {
+      const imageContainer = e.currentTarget;
+      const zoomDetail = document.getElementById("zoom-detail-1");
+      const imageContainerRect = imageContainer.getBoundingClientRect();
+      const xPos = e.clientX - imageContainerRect.left;
+      const yPos = e.clientY - imageContainerRect.top;
+
+      const xPercentage = (xPos / imageContainerRect.width) * 100;
+      const yPercentage = (yPos / imageContainerRect.height) * 100;
+
+      zoomDetail.style.backgroundPosition = `${xPercentage}% ${yPercentage}%`;
+    });
+
+    // Add mouse move event to adjust the zoom detail for the second image
+    document.getElementById("image-container-2").addEventListener("mousemove", function(e) {
+      const imageContainer = e.currentTarget;
+      const zoomDetail = document.getElementById("zoom-detail-2");
+      const imageContainerRect = imageContainer.getBoundingClientRect();
+      const xPos = e.clientX - imageContainerRect.left;
+      const yPos = e.clientY - imageContainerRect.top;
+
+      const xPercentage = (xPos / imageContainerRect.width) * 100;
+      const yPercentage = (yPos / imageContainerRect.height) * 100;
+
+      zoomDetail.style.backgroundPosition = `${xPercentage}% ${yPercentage}%`;
+    });
+  </script>
+
+</body>
+</html>
